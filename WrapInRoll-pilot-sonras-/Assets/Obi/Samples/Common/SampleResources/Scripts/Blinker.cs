@@ -20,7 +20,7 @@ public class Blinker : MonoBehaviour {
 		
 	}
 	bool azalma;
-	float weight = 1;
+	float weight = 3;
     private void Update()
     {
         if (azalma)
