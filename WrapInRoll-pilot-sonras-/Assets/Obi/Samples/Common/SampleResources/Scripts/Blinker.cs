@@ -47,8 +47,8 @@ public class Blinker : MonoBehaviour {
 		PlayerAnim.enabled = false;
 		//azalma = true;
 		
-		ct.m_Targets[0].radius = 0;
-		ct.m_Targets[1].radius = 20;
+		ct.m_Targets[0].radius = 30;
+		ct.m_Targets[1].radius = 10;
 		ct.m_Targets[2].target = null;
 
 		//dg_simpleCamFollow.changeTarget = false;
