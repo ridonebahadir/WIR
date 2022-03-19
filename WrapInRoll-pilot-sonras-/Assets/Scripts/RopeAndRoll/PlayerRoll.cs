@@ -13,7 +13,7 @@ public class PlayerRoll : MonoBehaviour
     public GameObject tap;
     public GrapplingHook grapplingHook;
     public dg_simpleCamFollow dg;
-    //public CameraMultiTarget cmt;
+  
 
     public CinemachineBrain cb;
     public Rigidbody rb;
@@ -82,7 +82,7 @@ public class PlayerRoll : MonoBehaviour
     bool oneRun = false;
     void LateCam()
     {
-      
+        cb.enabled = true;
         if (!oneRun)
         {
             grapplingHook.enabled = true;

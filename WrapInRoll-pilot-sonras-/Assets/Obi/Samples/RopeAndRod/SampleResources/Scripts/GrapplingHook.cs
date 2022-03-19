@@ -18,9 +18,11 @@ using Cinemachine;
  */
 public class GrapplingHook : MonoBehaviour
 {
+    public LineDistance lineDistance;
+    public GameObject distanceObj;
     public LayerMask layer;
     public CinemachineTargetGroup cinemachineTargetGroup;
-    public CinemachineBrain cinemachineBrain;
+    //public CinemachineBrain cinemachineBrain;
     public ObiSolver solver;
     public GameObject Player;
     public ObiCollider character;
@@ -99,7 +101,8 @@ public class GrapplingHook : MonoBehaviour
         playerRoll.enabled = false;
         trail.enabled = true;
         humanRb.constraints &= ~RigidbodyConstraints.FreezePositionZ;
-        
+        distanceObj.SetActive(false);
+        lineDistance.beforeText = true;
 
     }
     private void OnDestroy()
@@ -241,7 +244,7 @@ public class GrapplingHook : MonoBehaviour
     }
     void Late()
     {
-        cinemachineBrain.enabled = true;
+        //cinemachineBrain.enabled = true;
         target.transform.GetChild(1).gameObject.SetActive(false);
     }
 }

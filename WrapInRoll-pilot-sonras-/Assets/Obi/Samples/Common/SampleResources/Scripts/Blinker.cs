@@ -21,6 +21,7 @@ public class Blinker : MonoBehaviour {
 	}
 	bool azalma;
 	float weight = 3;
+	
     private void Update()
     {
         if (azalma)
@@ -28,13 +29,20 @@ public class Blinker : MonoBehaviour {
             if (weight>0)
             {
 				weight -= 0.001f;
+				
 
 			}
-            else
+			else
             {
 				azalma = false;
 				weight = 0;
             }
+
+            if (ct.m_Targets[2].weight > 0)
+            {
+				//ct.m_Targets[2].radius -= 0.1f;
+				ct.m_Targets[2].weight -= 0.1f;
+			}
         }
 		ct.m_Targets[0].weight = weight;
 	}
@@ -45,11 +53,11 @@ public class Blinker : MonoBehaviour {
 		//PlayerAnim.SetBool("Finish",true);
 
 		PlayerAnim.enabled = false;
-		//azalma = true;
+		azalma = true;
 		
 		ct.m_Targets[0].radius = 30;
 		ct.m_Targets[1].radius = 10;
-		ct.m_Targets[2].target = null;
+		//ct.m_Targets[2].target = null;
 
 		//dg_simpleCamFollow.changeTarget = false;
 		//Invoke("RopeTouch", 8);
