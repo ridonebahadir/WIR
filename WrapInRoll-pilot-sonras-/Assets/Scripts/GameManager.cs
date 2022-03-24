@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         
        
 
-        if (Score>((collectionRoll.totalScore*50)/100))
+        if (Score>((collectionRoll.totalScore*75)/100))
         {
             Success();
            
@@ -145,18 +145,18 @@ public class GameManager : MonoBehaviour
         ResultText.text = result;
 
 
-        if (Score > ((collectionRoll.totalScore * 50) / 100))
+        if (Score > ((collectionRoll.totalScore * 75) / 100))
         {
             star[0].SetActive(true);
             perfect.text = "Keep Going";
         }
-        if (Score > ((collectionRoll.totalScore * 75) / 100))
+        if (Score > ((collectionRoll.totalScore * 85) / 100))
         {
             star[0].SetActive(true);
             star[1].SetActive(true);
             perfect.text = "Well Done";
         }
-        if (Score > ((collectionRoll.totalScore * 90) / 100))
+        if (Score > ((collectionRoll.totalScore * 95) / 100))
         {
             star[0].SetActive(true);
             star[1].SetActive(true);

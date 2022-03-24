@@ -18,8 +18,8 @@ using Cinemachine;
  */
 public class GrapplingHook : MonoBehaviour
 {
-    public LineDistance lineDistance;
-    public GameObject distanceObj;
+    //public LineDistance lineDistance;
+    //public GameObject distanceObj;
     public LayerMask layer;
     public CinemachineTargetGroup cinemachineTargetGroup;
     //public CinemachineBrain cinemachineBrain;
@@ -101,8 +101,8 @@ public class GrapplingHook : MonoBehaviour
         playerRoll.enabled = false;
         trail.enabled = true;
         humanRb.constraints &= ~RigidbodyConstraints.FreezePositionZ;
-        distanceObj.SetActive(false);
-        lineDistance.beforeText = true;
+        //distanceObj.SetActive(false);
+        //lineDistance.beforeText = true;
 
     }
     private void OnDestroy()
@@ -127,7 +127,7 @@ public class GrapplingHook : MonoBehaviour
         Ray ray = new Ray(transform.position, targetObj.transform.position - transform.position);
 
         // Raycast to see what we hit:
-        if (Physics.Raycast(ray, out hookAttachment,1000,layer, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(ray, out hookAttachment,10000,layer, QueryTriggerInteraction.Ignore))
         {
             Debug.Log("HOOK = "+hookAttachment.collider.gameObject.name);
             // We actually hit something, so attach the hook!
@@ -177,20 +177,44 @@ public class GrapplingHook : MonoBehaviour
     }
 
     //public Animator anim;
-    
-   
+    bool azalma;
+    float weight = 5;
+    public CinemachineTargetGroup ct;
+
     void Update()
     {
+        if (azalma)
+        {
+            if (weight < 10)
+            {
+                weight += 0.01f;
+
+
+            }
+            else
+            {
+                azalma = false;
+                weight = 10;
+            }
+
+            //         if (ct.m_Targets[2].weight > 0)
+            //         {
+            //	//ct.m_Targets[2].radius -= 0.1f;
+            //	ct.m_Targets[2].weight -= 0.1f;
+            //}
+        }
+        ct.m_Targets[1].weight = weight;
+
         //if (!touch)
         //{
 
 
         //    //anim.enabled = true;
         //    //player.SetActive(false);
-           
-            
+
+
         //    touch = true;
-            
+
         //    return;
         //    //    DetachHook();
 
@@ -216,7 +240,7 @@ public class GrapplingHook : MonoBehaviour
             //    cinemachineTargetGroup.m_Targets[count-1].weight = 0;
             //}
             grapplingHook.enabled = false;
-
+            Touch();
 
         }
         //if (rope.isLoaded)
@@ -241,6 +265,16 @@ public class GrapplingHook : MonoBehaviour
         //    //    cursor.ChangeLength(rope.restLength + hookExtendRetractSpeed * Time.deltaTime);
         //    //}
         //}
+    }
+
+    void Touch()
+    {
+        
+        azalma = true;
+
+        //ct.m_Targets[0].radius = 30;
+        //ct.m_Targets[1].radius = 10;
+        ct.m_Targets[2].target = null;
     }
     void Late()
     {
