@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.26235747, g: 0.30841407, b: 0.5848005, a: 1}
+  m_IndirectSpecularColor: {r: 0.5298436, g: 0.41161373, b: 0.53544074, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -354,7 +354,6 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
   gm: {fileID: 640001882}
   PlayerAnim: {fileID: 1530453274}
-  ct: {fileID: 479197209}
   grapplingHook: {fileID: 1201433691}
 --- !u!114 &16057721
 MonoBehaviour:
@@ -4267,7 +4266,6 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
   gm: {fileID: 640001882}
   PlayerAnim: {fileID: 1530453274}
-  ct: {fileID: 479197209}
   grapplingHook: {fileID: 1201433691}
 --- !u!114 &595768253
 MonoBehaviour:
@@ -5651,7 +5649,6 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
   gm: {fileID: 640001882}
   PlayerAnim: {fileID: 1530453274}
-  ct: {fileID: 479197209}
   grapplingHook: {fileID: 1201433691}
 --- !u!114 &786952505
 MonoBehaviour:
@@ -8004,7 +8001,6 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
   gm: {fileID: 640001882}
   PlayerAnim: {fileID: 1530453274}
-  ct: {fileID: 479197209}
   grapplingHook: {fileID: 1201433691}
 --- !u!114 &1034658843
 MonoBehaviour:
@@ -10103,7 +10099,6 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
   gm: {fileID: 640001882}
   PlayerAnim: {fileID: 1530453274}
-  ct: {fileID: 479197209}
   grapplingHook: {fileID: 1201433691}
 --- !u!114 &1196142866
 MonoBehaviour:
@@ -10309,6 +10304,7 @@ MonoBehaviour:
   trail: {fileID: 2461546968681719659}
   humanRb: {fileID: 1247776988}
   grapplingHook: {fileID: 1201433691}
+  ct: {fileID: 0}
 --- !u!4 &1202080757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 880970725214738984, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
@@ -11430,7 +11426,6 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
   gm: {fileID: 640001882}
   PlayerAnim: {fileID: 1530453274}
-  ct: {fileID: 479197209}
   grapplingHook: {fileID: 1201433691}
 --- !u!114 &1323505361
 MonoBehaviour:
@@ -12621,7 +12616,6 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
   gm: {fileID: 640001882}
   PlayerAnim: {fileID: 1530453274}
-  ct: {fileID: 479197209}
   grapplingHook: {fileID: 1201433691}
 --- !u!114 &1465285229
 MonoBehaviour:
@@ -17318,7 +17312,6 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
   gm: {fileID: 640001882}
   PlayerAnim: {fileID: 1530453274}
-  ct: {fileID: 479197209}
   grapplingHook: {fileID: 1201433691}
 --- !u!114 &1953693846
 MonoBehaviour:
@@ -18547,7 +18540,6 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
   gm: {fileID: 640001882}
   PlayerAnim: {fileID: 1530453274}
-  ct: {fileID: 479197209}
   grapplingHook: {fileID: 1201433691}
 --- !u!114 &2030796140
 MonoBehaviour:
@@ -18954,7 +18946,6 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
   gm: {fileID: 640001882}
   PlayerAnim: {fileID: 1530453274}
-  ct: {fileID: 479197209}
   grapplingHook: {fileID: 1201433691}
 --- !u!114 &2046072015
 MonoBehaviour:
@@ -19946,12 +19937,12 @@ MonoBehaviour:
   worldAngularInertiaScale: 0
   distanceConstraintParameters:
     evaluationOrder: 0
-    iterations: 5
+    iterations: 8
     SORFactor: 1
     enabled: 1
   bendingConstraintParameters:
     evaluationOrder: 1
-    iterations: 3
+    iterations: 8
     SORFactor: 1
     enabled: 1
   particleCollisionConstraintParameters:
@@ -20177,7 +20168,6 @@ MonoBehaviour:
   tap: {fileID: 1589098164}
   grapplingHook: {fileID: 1201433691}
   dg: {fileID: 942810418}
-  cmt: {fileID: 942810417}
   cb: {fileID: 942810419}
   rb: {fileID: 1247776988}
   runSpeed: 0.3
