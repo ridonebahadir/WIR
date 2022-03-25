@@ -26,7 +26,12 @@ public class HumanRoll : MonoBehaviour
     [Header("Shake")]
     public float shakePower;
     public float shakeTime;
- 
+
+
+    [Header("Sound")]
+    public AudioClip[] audioClip;
+    public AudioSource audioSource;
+    public int turn;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Fruit")
@@ -77,9 +82,21 @@ public class HumanRoll : MonoBehaviour
         transform.position = new Vector3(0, transform.position.y, transform.position.z);
     }
 
-
+    
     void Fruit(GameObject other,int puan,Vector3 target,Color color)
     {
+       
+        audioSource.PlayOneShot(audioClip[turn]);
+        if (turn<audioClip.Length-1)
+        {
+            turn++;
+            
+        }
+        else
+        {
+            turn = 0;
+        }
+       
         gm.Score += puan;
         slider.value += puan;
         gm.ScoreText.text = "Score = " + gm.Score.ToString();

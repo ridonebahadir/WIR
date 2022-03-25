@@ -18,7 +18,7 @@ public class CollectionRoll : MonoBehaviour
 
     public int totalPiece;
     public int totalScore;
-    int piece = 10;
+    int piece = 5;
     public Slider slider;
     
     void Start()
