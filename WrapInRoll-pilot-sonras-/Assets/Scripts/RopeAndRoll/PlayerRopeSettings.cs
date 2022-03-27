@@ -19,13 +19,13 @@ public class PlayerRopeSettings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((obiSolver.distanceConstraintParameters.SORFactor<1.7f)&& (obiSolver.distanceConstraintParameters.SORFactor>0.2f))
+        if ((obiSolver.distanceConstraintParameters.SORFactor<1.8f)&& (obiSolver.distanceConstraintParameters.SORFactor>0.1f))
         {
             obiSolver.distanceConstraintParameters.SORFactor += dynamicJoystick.Vertical * speed*Time.deltaTime;
             obiSolver.PushSolverParameters();
         }
-        if (obiSolver.distanceConstraintParameters.SORFactor > 1.7) obiSolver.distanceConstraintParameters.SORFactor = 1.6f;
-        if (obiSolver.distanceConstraintParameters.SORFactor < 0.2) obiSolver.distanceConstraintParameters.SORFactor = 0.3f;
+        if (obiSolver.distanceConstraintParameters.SORFactor > 1.9f) obiSolver.distanceConstraintParameters.SORFactor = 1.8f;
+        if (obiSolver.distanceConstraintParameters.SORFactor < 0.1f) obiSolver.distanceConstraintParameters.SORFactor = 0.2f;
 
 
 

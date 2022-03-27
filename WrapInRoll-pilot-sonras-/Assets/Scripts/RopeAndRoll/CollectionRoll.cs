@@ -18,19 +18,19 @@ public class CollectionRoll : MonoBehaviour
 
     public int totalPiece;
     public int totalScore;
-    int piece = 10;
+    int piece = 8;
     public Slider slider;
     
     void Start()
     {
         
-        int circlePiece = PlayerPrefs.GetInt("CirclePiece", 1);
+        int circlePiece = PlayerPrefs.GetInt("CirclePiece", 2);
 
        
         for (int i = 1; i <= circlePiece; i++)
             {
                 int puan = pointPrefab[i - 1].gameObject.transform.GetChild(0).GetComponent<Fruit>().puan;
-                Instantiate(10 * i, 10 * i, piece * i, pointPrefab[i - 1], puan);
+                Instantiate(8 * i, 8 * i, piece * i, pointPrefab[i - 1], puan);
             }
         
             
