@@ -180,6 +180,8 @@ public class GrapplingHook : MonoBehaviour
     bool azalma;
     float weight = 5;
     public CinemachineTargetGroup ct;
+    public float distance;
+    public PlayerRopeSettings playerRopeSettings;
 
     void Update()
     {
@@ -222,6 +224,9 @@ public class GrapplingHook : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
+            playerRopeSettings.rundistance = true;
+            distance = Vector3.Distance(target.position,transform.position);
+            playerRopeSettings.distance = distance;
             //target = targetParent.GetChild(count);
             //DetachHook();
             Invoke("Late", 1f);
