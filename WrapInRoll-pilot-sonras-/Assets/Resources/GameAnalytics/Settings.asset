@@ -26,21 +26,21 @@ MonoBehaviour:
   UserMessagesFailed: 0
   CustomArea: 
   gameKey:
-  - 8c23e15506b95f8f1be44413a38b3600
+  - 961f70c52eeb9d41f5c44c41cbf22c46
   secretKey:
-  - b359b4b8a295d4a8233118247f5e93c8f9924707
+  - a282aa171bfb1c5fa4421582d4be036aec5d9778
   Build:
   - 0.1
   SelectedPlatformOrganization:
-  - Midcat Game
+  - 
   SelectedPlatformStudio:
-  - MidCat
+  - 
   SelectedPlatformGame:
-  - Wrap and Roll
+  - 
   SelectedPlatformGameID: 070c0300
   SelectedOrganization: 01000000
   SelectedStudio: 01000000
-  SelectedGame: 01000000
+  SelectedGame: 02000000
   NewVersion: 
   Changes: 
   SignUpOpen: 0
